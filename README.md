@@ -1,6 +1,6 @@
 # mailchimp-go
 
-**11/19/2019:** This repo was forked so I could fix a bug in the original repo. The original was extremely stale and [the only pull request](https://github.com/beeker1121/mailchimp-go/pull/1) has been sitting there since 2017, hence the decision to fork/modify it rather than try to submit a PR on the original. @beeker1121, if you see this fork and would rather me contribute a PR to your project, I'm open to it!
+**11/19/2019:** This repo was forked so I could fix a bug in the original repo. The original seemed stale and [the only pull request](https://github.com/beeker1121/mailchimp-go/pull/1) has been sitting there since 2017.
 
 mailchimp-go is a Go client for the MailChimp API v3.
 
