@@ -1,4 +1,6 @@
-# mailchimp-go [![License](http://img.shields.io/badge/license-mit_bsd-blue.svg)](https://raw.githubusercontent.com/beeker1121/mailchimp-go/master/LICENSE) [![Go Report Card](https://img.shields.io/badge/go_report-A+-brightgreen.svg)](https://goreportcard.com/report/github.com/beeker1121/mailchimp-go) [![Build Status](https://travis-ci.org/beeker1121/mailchimp-go.svg?branch=master)](https://travis-ci.org/beeker1121/mailchimp-go)
+# mailchimp-go
+
+**11/19/2019:** This repo was forked for use in a private repo. The original was extremely stale and [the only pull request](https://github.com/beeker1121/mailchimp-go/pull/1) has been sitting there since 2017, hence the decision to fork/modify it rather than try to submit a PR on the original. @beeker1121, if you see this fork and would rather me contribute a PR to your project, I'm open to it!
 
 mailchimp-go is a Go client for the MailChimp API v3.
 
@@ -10,33 +12,33 @@ Contributing code to complete missing resources is greatly appreciated.
 
 Below is the main mailchimp-go GoDoc reference:
 
-**mailchimp-go** - [http://godoc.org/github.com/beeker1121/mailchimp-go](http://godoc.org/github.com/beeker1121/mailchimp-go)
+**mailchimp-go** - [http://godoc.org/github.com/DeanPDX/mailchimp-go](http://godoc.org/github.com/DeanPDX/mailchimp-go)
 
 Each API resource is a separate package within mailchimp-go.
 
 Below are the GoDoc references for each supported resource:
 
-**Lists** - [https://godoc.org/github.com/beeker1121/mailchimp-go/lists](https://godoc.org/github.com/beeker1121/mailchimp-go/lists)  
-**Lists/Members** - [https://godoc.org/github.com/beeker1121/mailchimp-go/lists/members](https://godoc.org/github.com/beeker1121/mailchimp-go/lists/members)
+**Lists** - [https://godoc.org/github.com/DeanPDX/mailchimp-go/lists](https://godoc.org/github.com/DeanPDX/mailchimp-go/lists)  
+**Lists/Members** - [https://godoc.org/github.com/DeanPDX/mailchimp-go/lists/members](https://godoc.org/github.com/DeanPDX/mailchimp-go/lists/members)
 
 ## Installation
 
 Fetch the package from GitHub:
 
 ```sh
-go get github.com/beeker1121/mailchimp-go
+go get github.com/DeanPDX/mailchimp-go
 ```
 
 Import to your project:
 
 ```go
-import mailchimp "github.com/beeker1121/mailchimp-go"
+import mailchimp "github.com/DeanPDX/mailchimp-go"
 ```
 
 Import the API resources you wish to use. For example, to use the `Lists` resource:
 
 ```go
-import "github.com/beeker1121/mailchimp-go/lists"
+import "github.com/DeanPDX/mailchimp-go/lists"
 ```
 
 ## Usage
@@ -48,7 +50,7 @@ At the moment, this library has minimal coverage of the MailChimp API.
 First, set your MailChimp API key:
 
 ```go
-import mailchimp "github.com/beeker1121/mailchimp-go"
+import mailchimp "github.com/DeanPDX/mailchimp-go"
 ...
 err := mailchimp.SetKey("YOUR-API-KEY")
 ...
@@ -57,7 +59,7 @@ err := mailchimp.SetKey("YOUR-API-KEY")
 ### Create a list
 
 ```go
-import "github.com/beeker1121/mailchimp-go/lists"
+import "github.com/DeanPDX/mailchimp-go/lists"
 ...
 
 // Set request parameters.
@@ -90,7 +92,7 @@ fmt.Printf("%+v\n", list)
 ### Add a member to a list
 
 ```go
-import "github.com/beeker1121/mailchimp-go/lists/members"
+import "github.com/DeanPDX/mailchimp-go/lists/members"
 ...
 
 // Set request parameters.
@@ -108,7 +110,7 @@ fmt.Printf("%+v\n", member)
 ### Get list members
 
 ```go
-import "github.com/beeker1121/mailchimp-go/lists/members"
+import "github.com/DeanPDX/mailchimp-go/lists/members"
 ...
 
 // Set request parameters.
@@ -125,7 +127,7 @@ fmt.Printf("%+v\n", listMembers)
 ### Get a list member
 
 ```go
-import "github.com/beeker1121/mailchimp-go/lists/members"
+import "github.com/DeanPDX/mailchimp-go/lists/members"
 ...
 
 // Get member 123 from list 123456.
@@ -137,7 +139,7 @@ fmt.Printf("%+v\n", member)
 ### Delete a list member
 
 ```go
-import "github.com/beeker1121/mailchimp-go/lists/members"
+import "github.com/DeanPDX/mailchimp-go/lists/members"
 ...
 
 // Delete member 123 from list 123456.
