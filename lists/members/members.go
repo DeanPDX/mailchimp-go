@@ -155,7 +155,7 @@ type ListMembers struct {
 type NewParams struct {
 	EmailType       EmailType              `json:"email_type,omitempty"`
 	Status          Status                 `json:"status"`
-	MergeFields     map[string]interface{} `json:"merge_fields,omitempty"`
+	MergeFields     map[string]interface{} `json:"merge_fields"`
 	Interests       map[string]bool        `json:"interests,omitempty"`
 	Language        string                 `json:"language,omitempty"`
 	VIP             bool                   `json:"vip,omitempty"`
@@ -178,6 +178,12 @@ func (np *NewParams) MarshalJSON() ([]byte, error) {
 	}
 	if !np.TimestampOpt.IsZero() {
 		timestampOpt = np.TimestampOpt.Format(time.RFC3339)
+	}
+
+	// MailChimp requires MergeFields to be empty, not null. See:
+	// https://stackoverflow.com/questions/41508831/mailchimp-api-3-0-invalid-resource-error
+	if np.MergeFields == nil {
+		np.MergeFields = map[string]interface{}{}
 	}
 
 	type alias NewParams
