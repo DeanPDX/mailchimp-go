@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/beeker1121/mailchimp-go/query"
+	"github.com/DeanPDX/mailchimp-go/query"
 )
 
 // The MailChimp API url structure.

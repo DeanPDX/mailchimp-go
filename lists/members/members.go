@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	mailchimp "github.com/beeker1121/mailchimp-go"
-	"github.com/beeker1121/mailchimp-go/query"
+	mailchimp "github.com/DeanPDX/mailchimp-go"
+	"github.com/DeanPDX/mailchimp-go/query"
 )
 
 // EmailType defines the type of email a member asked to get.

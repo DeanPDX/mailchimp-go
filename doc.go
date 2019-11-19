@@ -2,5 +2,5 @@
 //
 // Reference: http://developer.mailchimp.com/documentation/mailchimp/reference/overview/
 //
-// See README.md or visit https://github.com/beeker1121/mailchimp-go for more info.
+// See README.md or visit https://github.com/DeanPDX/mailchimp-go for more info.
 package mailchimp

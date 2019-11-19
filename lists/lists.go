@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	mailchimp "github.com/beeker1121/mailchimp-go"
-	"github.com/beeker1121/mailchimp-go/query"
+	mailchimp "github.com/DeanPDX/mailchimp-go"
+	"github.com/DeanPDX/mailchimp-go/query"
 )
 
 // Contact defines the contact information of the list owner, which
@@ -219,7 +219,7 @@ func (gp *GetParams) EncodeQueryString(v interface{}) (string, error) {
 		SinceDateCreated:       sinceDateCreated,
 		BeforeCampaignLastSent: beforeCampaignLastSent,
 		SinceCampaignLastSent:  sinceCampaignLastSent,
-		Email: gp.Email,
+		Email:                  gp.Email,
 	})
 }
 
